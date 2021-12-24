@@ -1,0 +1,3 @@
+is_mock,url,file,commit
+0,https://test.coachapi.yundiketang.cn/coach-provider/open/student/list/for/coach?relation=INDEX&pageSize=5&pageNum=1,student_index.json,首页-平台生源
+0,https://test.coachapi.yundiketang.cn/coach-provider/open/student/list/for/coach?relation=TO_SIGN&pageSize=5&pageNum=1,student_to_sign.json,首页-待签约生源

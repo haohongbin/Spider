@@ -1,0 +1,1 @@
+curl -H 'accept: */*' -H 'if-none-match: "98b96ef54f658b136aa91b887568c13d10cb6aae"' -H 'user-agent: geod/1 CFNetwork/1220.1 Darwin/20.3.0' -H 'accept-language: zh-cn' --compressed 'https://configuration.ls.apple.com/config/defaults?os=ios&os_version=14.4.2&hardware=iPhone11,6'
