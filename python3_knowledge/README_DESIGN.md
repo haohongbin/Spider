@@ -673,4 +673,364 @@ DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("/
 这个写法与decorateTeacher = GlassesDecorator(WhiteShirtDecorator(LeatherShoesDecorator(Teacher("wells", "教授")))) 很相似
 都是用一个对象套一个对象的方式进行创建的。
 
+# 6 克隆模式
+### 6.1 从生活中领悟克隆模式
+#### 6.1.2 用程序模拟生活
+```python
+from copy import copy, deepcopy
+
+class Person:
+    '''人'''
+
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def showMyself(self):
+        print("我是" + self.__name + "，年龄" + str(self.__age) + ".")
+
+    def coding(self):
+        print("我是码农，我用程序改变世界....")
+
+    def reading(self):
+        print("阅读使我快乐！知识使我成长！")
+
+    def fallInLove(self):
+        print("春风吹，月亮明，花前月下好相约。。。")
+
+    def clone(self):
+        return copy(self)
+
+tony = Person("Tony", 27)
+tony.showMyself() # 我是Tony，年龄27.
+tony.reading() # 阅读使我快乐！知识使我成长！
+tony1 = tony.clone()
+tony1.showMyself() # 我是Tony，年龄27.
+tony1.reading() # 阅读使我快乐！知识使我成长！
+
+```
+这个例子中，Tony克隆出了一个自己tony1，因为是克隆出来的，所以姓名和年龄都一样。  
+### 6.2 从剧情中思考克隆模式
+#### 6.2.1 什么是克隆模式
+通过拷贝自身的属性来创建一个新对象的过程叫做克隆模式。也被叫做"原型模式"  
+核心就是一个clone方法，clone方法的功能就是拷贝父本的所有属性。主要包括两个过程：  
+（1）分配一块新的内存空间给新的对象。  
+（2）拷贝父本对象的所有属性。  
+#### 6.2.2 浅拷贝与深拷贝
+```python
+from copy import copy, deepcopy
+
+class PetStore:
+    '''宠物店'''
+
+    def __init__(self, name):
+        self.__name = name
+        self.__petList = []
+
+    def setName(self, name):
+        self.__name = name
+
+    def showMyself(self):
+        print(f"{self.__name}宠物店有以下宠物：")
+        for pet in self.__petList:
+            print(pet + "\t", end="")
+        print()
+
+    def addPet(self, pet):
+        self.__petList.append(pet)
+
+petter = PetStore("Petter")
+petter.addPet("小狗")
+print("父本petter:", end="")
+petter.showMyself()
+print()
+
+petter1 = deepcopy(petter)
+petter1.addPet("小猫")
+print("副本petter1:", end="")
+petter1.showMyself()
+print("父本petter:", end="")
+petter.showMyself()
+print()
+
+petter2 = copy(petter)
+petter2.addPet("小兔")
+print("副本petter2:", end="")
+petter2.showMyself()
+print("父本petter:", end="")
+petter.showMyself()
+print()
+'''
+父本petter:Petter宠物店有以下宠物：
+小狗	
+
+副本petter1:Petter宠物店有以下宠物：
+小狗	小猫	
+父本petter:Petter宠物店有以下宠物：
+小狗	
+
+副本petter2:Petter宠物店有以下宠物：
+小狗	小兔	
+父本petter:Petter宠物店有以下宠物：
+小狗	小兔	
+'''
+```
+通过这个例子，看到petter1是通过深拷贝的方式创建的，我们对petter1对象增加宠物，不会影响petter对象。  
+petter2是通过浅拷贝的方式创建的，我们对petter2对象增加宠物时，petter对象也跟着改变，这是因为PetStore类的
+__petList成员是一个可变的引用类型。  
+* 浅拷贝只拷贝引用类型对象的指针，而不拷贝引用类型对象指向的值；  
+* 深拷贝则同时拷贝引用类型对象及其指向的值  
+引用类型：对象本身可以修改，python中的引用类型有列表、字典、类对象。  
+python在赋值的时候默认是浅拷贝，引用类型的赋值  
+```python
+list = [1, 2, 3]
+list1 = list
+print("id(list):", id(list)) # id(list): 140372313951552
+print("id(list1):", id(list1)) # id(list1): 140372313951552
+print("修改之前：")
+print("list:", list) # list: [1, 2, 3]
+print("list1:", list1) # list1: [1, 2, 3]
+list1.append(4)
+print("修改之后：")
+print("list:", list) # list: [1, 2, 3, 4]
+print("list1:", list1) # list1: [1, 2, 3, 4]
+
+```
+通过克隆的方式创建对象，浅拷贝往往是危险的，因为如果这个类有引用类型的属性时，一个对象的改变会引起另一个对象的改变。
+深拷贝会对一个对象的属性进行全拷贝，这样两个对象之间就不会相互影响了。  
+在使用克隆模式时，除非一些特殊情况（需求本身就要两个对象一起改变），尽量使用深拷贝的方式（我们称其为安全模式）。  
+### 6.3 克隆模式的模型抽象
+#### 6.3.1 代码框架
+```python
+from copy import copy, deepcopy
+
+class Clone:
+    '''克隆的基类'''
     
+    def clone(self):
+        return copy(self)
+    
+    def deepClone(self):
+        return deepcopy(self)
+```
+#### 6.3.2 类图
+![克隆模式的类图](snapshot/克隆模式的类图.png)  
+Clone是克隆模式的基类，SubClassA和SubClassB是具体的实现类。  
+python中有copy模块的支持，因此克隆模式实现起来非常简单。  
+#### 6.3.3 基于框架的实现
+version2.0  
+```python
+from copy import copy, deepcopy
+
+class Clone:
+
+    def clone(self):
+        return copy(self)
+
+    def deepClone(self):
+        return deepcopy(self)
+
+class Person(Clone):
+    '''人'''
+
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def showMyself(self):
+        print("我是" + self.__name + "，年龄" + str(self.__age) + ".")
+
+    def coding(self):
+        print("我是码农，我用程序改变世界....")
+
+    def reading(self):
+        print("阅读使我快乐！知识使我成长！")
+
+    def fallInLove(self):
+        print("春风吹，月亮明，花前月下好相约。。。")
+
+
+tony = Person("Tony", 27)
+tony.showMyself() # 我是Tony，年龄27.
+tony.reading() # 阅读使我快乐！知识使我成长！
+tony1 = tony.clone()
+tony1.showMyself() # 我是Tony，年龄27.
+tony1.reading() # 阅读使我快乐！知识使我成长！
+```
+#### 6.3.3 模型说明
+* 设计要点  
+克隆模式也叫原型模式。唯一需要注意：区分浅拷贝与深拷贝，尽量使用深拷贝  
+* 克隆模式优缺点  
+优点：  
+（1）克隆模式通过内存拷贝的方式进行复制，比new的方式创建对象性能更好。  
+（2）通过深拷贝，可以很方便的创建一个具有相同属性和行为的另一个对象  
+缺点：  
+通过克隆的方式创建对象，不会执行类的初始化函数（__init__）  
+### 6.4 实战应用
+应用程序都会有一些功能设置的操作（如字体、字号、常用快捷键），我们在修改这些配置时，希望备份一下
+原有配置，以便有问题还原。  
+```python
+from copy import copy, deepcopy
+
+class Clone:
+
+    def clone(self):
+        return copy(self)
+
+    def deepClone(self):
+        return deepcopy(self)
+
+class AppConfig(Clone):
+    '''应用程序功能配置'''
+
+    def __init__(self, configName):
+        self.__configName = configName
+        self.paraseFromFile("./config/default.xml")
+
+
+    def paraseFromFile(self, filePath):
+        '''
+        从配置文件中解析配置项
+        真实项目中通常会将配置保存在配置文件中，保证下次开启时能够生效
+        这里为简单起见，不从文件中读取，以初始化的方式来模拟
+        :param filePath:
+        :return:
+        '''
+        self.__fontType = "宋体"
+        self.__fontSize = 14
+        self.__language = "中文"
+        self.__logPath = "./logs/appException.log"
+
+    def saveToFile(self, filePath):
+        """
+        将配置保存到配置文件中
+        :param filePath:
+        :return:
+        """
+        pass
+
+    def copyConfig(self, configName):
+        """创建一个配置的副本"""
+        config = self.deepClone()
+        config.__configName = configName
+        return config
+
+    def showInfo(self):
+        print(f"{self.__configName}的配置信息如下：")
+        print(f"字体：{self.__fontType}")
+        print(f"字号：{self.__fontSize}")
+        print(f"语言：{self.__language}")
+        print(f"异常文件的路径：{self.__logPath}")
+
+    def setFontType(self, fontType):
+        self.__fontType = fontType
+
+    def setFontSize(self, fontSize):
+        self.__fontSize = fontSize
+
+    def setLanguage(self, language):
+        self.__language = language
+
+    def setLogPath(self, logPath):
+        self.__logPath = logPath
+
+defaultConfig = AppConfig("default")
+defaultConfig.showInfo()
+print()
+
+newConfig = defaultConfig.copyConfig("tonyConfig")
+newConfig.setFontType("雅黑")
+newConfig.setFontSize(18)
+newConfig.setLanguage("English")
+newConfig.showInfo()
+
+'''
+default的配置信息如下：
+字体：宋体
+字号：14
+语言：中文
+异常文件的路径：./logs/appException.log
+
+tonyConfig的配置信息如下：
+字体：雅黑
+字号：18
+语言：English
+异常文件的路径：./logs/appException.log
+
+'''
+
+```
+### 6.5 应用场景
+（1）如果创建新对象（如复杂对象）成本较高，我们可以利用已有的对象进行复制来获得。  
+（2）类的初始化需要消耗非常多的资源时，如需要消耗很多的数据、硬件等资源。  
+（3）可配合备忘录模式做一些备份的工作
+
+### 额外补充
+* 浅拷贝指重新分配一块内存，创建一个新的对象，里面的元素是原对象中子对象的引用。因此，如果原对象中的
+元素不可变，无所谓；如果元素可变，浅拷贝会带来一些副作用  
+* 深拷贝指重新分配一块内存，创建一个新的对象，并将原对象中的元素以递归的方式，通过创建新的子对象拷贝到
+新对象中，因此新对象和原对象没有任何关联  
+```python
+from copy import copy, deepcopy
+l = [1,2,3]
+l1 = copy(l)
+l2 = deepcopy(l)
+print(f"id(l):{id(l)}")
+print(f"id(l1):{id(l1)}")
+print(f"id(l2):{id(l2)}")
+print()
+print(f"id(l[0]):{id(l[0])},id(l[1]):{id(l[1])},id(l[2]):{id(l[2])}")
+print(f"id(l1[0]):{id(l1[0])},id(l1[1]):{id(l1[1])},id(l1[2]):{id(l1[2])}")
+print(f"id(l2[0]):{id(l2[0])},id(l2[1]):{id(l2[1])},id(l2[2]):{id(l2[2])}")
+l1[0] = 2
+l2[0] = 2
+print("修改之后")
+print(f"id(l[0]):{id(l[0])},id(l[1]):{id(l[1])},id(l[2]):{id(l[2])}")
+print(f"id(l1[0]):{id(l1[0])},id(l1[1]):{id(l1[1])},id(l1[2]):{id(l1[2])}")
+print(f"id(l2[0]):{id(l2[0])},id(l2[1]):{id(l2[1])},id(l2[2]):{id(l2[2])}")
+'''
+id(l):140732039526016
+id(l1):140732039628480
+id(l2):140732039627008
+
+id(l[0]):4346141024,id(l[1]):4346141056,id(l[2]):4346141088
+id(l1[0]):4346141024,id(l1[1]):4346141056,id(l1[2]):4346141088
+id(l2[0]):4346141024,id(l2[1]):4346141056,id(l2[2]):4346141088
+修改之后
+id(l[0]):4346141024,id(l[1]):4346141056,id(l[2]):4346141088
+id(l1[0]):4346141056,id(l1[1]):4346141056,id(l1[2]):4346141088
+id(l2[0]):4346141056,id(l2[1]):4346141056,id(l2[2]):4346141088
+'''
+```  
+以上示例可以看出，浅拷贝与深拷贝，都重新分配一块内存，但元素为整型-不可变，没影响。  
+```python
+from copy import copy, deepcopy
+l = [[1,2],[3,4]]
+l1 = copy(l)
+
+print(f"id(l):{id(l)}")
+print(f"id(l1):{id(l1)}")
+print()
+print(f"id(l[0]):{id(l[0])},id(l[1]):{id(l[1])}")
+print(f"id(l1[0]):{id(l1[0])},id(l1[1]):{id(l1[1])}")
+l1[0].append(2)
+print("修改之后")
+print(f"id(l[0]):{id(l[0])},id(l[1]):{id(l[1])}")
+print(f"id(l1[0]):{id(l1[0])},id(l1[1]):{id(l1[1])}")
+print(f"l:{l},l1:{l1}")
+
+'''
+id(l):140573047148032
+id(l1):140573047234368
+
+id(l[0]):140573047092928,id(l[1]):140573047194880
+id(l1[0]):140573047092928,id(l1[1]):140573047194880
+修改之后
+id(l[0]):140573047092928,id(l[1]):140573047194880
+id(l1[0]):140573047092928,id(l1[1]):140573047194880
+l:[[1, 2, 2], [3, 4]],l1:[[1, 2, 2], [3, 4]]
+'''
+
+```
+以上示例可以看出，l1为浅拷贝，列表中的元素为列表-可变，
+由于浅拷贝里面的元素是原对象中子对象的引用，这样修改l1[0]，会影响原列表l[0]的值
