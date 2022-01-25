@@ -7,3 +7,4 @@ pytesseract==0.3.8
 mitmproxy==7.0.4
 Faker==2.0.2
 numpy==1.21.5
+Markdown==3.3.6
