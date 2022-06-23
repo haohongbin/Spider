@@ -67,7 +67,7 @@ metaclas直译为元类，可控制类的属性和类实例的创建过程。
 python中，一切都可以是对象：一个整数、一串字符串、一个类实例、类本身都是对象。  
 一个类也是一个对象，他是元类（metaclass）的一个实例.  
 对象、类、元类的关系,如图  
-![对象、类、元类的关系](snapshot/对象_类_元类的关系.png)
+![对象、类、元类的关系](../jacoco/snapshot/对象_类_元类的关系.png)
 ```python
 class MyClass:
     pass
@@ -87,7 +87,7 @@ type在python中是一个极为特殊的类型。为了彻底理解metaclass，�
 * type是object的一个子类，继承object的所有属性和行为
 * type还是一个callable,即实现了__call__方法，可以当成一个函数使用。  
 用一张图来解释type与object的关系  
-![type与object的关系](snapshot/type与object的关系.png)  
+![type与object的关系](../jacoco/snapshot/type与object的关系.png)  
 type与object有点像"蛋生鸡"与"鸡生蛋"的关系，type是object的子类， 同时object又是type的一个实例（type是object的类型），二者是不可分离的  
 type的类型也是type,先记住吧。  
 我们可以自定义metaclass，自定义的metaclass必须继承自type。  
@@ -115,7 +115,7 @@ object的__init__方法只有1个参数：def __init__(self),但type重写了__i
 因为自定义metaclass继承自type,所以重写__init__方法时也要4个参数
 * 对于普通的类，重写__call__方法说明对象是callable的。在metaclass中__call__方法还负责对象的创建。  
 对象的创建过程，如图  
-![对象的创建过程](snapshot/对象的创建过程.png)  
+![对象的创建过程](../jacoco/snapshot/对象的创建过程.png)  
 图中每一条实线都表示具体操作，每一条虚线表示返回的过程。  
 结合实例代码看：  
 ```python

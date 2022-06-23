@@ -1,0 +1,35 @@
+{
+  "status": true,
+  "data": {
+    "coachId": "421f4859-ef81-4242-a322-37d58117358b",
+    "resumeId": "9cbdc339-64a2-11ec-a88f-00163e366add",
+    "coachName": "张淑华",
+    "coachAvatar": "https://prd-public-yundi.oss-cn-beijing.aliyuncs.com/app/peilian/coach/t-boy.png",
+    "teachYears": 11,
+    "subject": 11,
+    "level": 3,
+    "recentKlassTime": null,
+    "klassUnitPrice": 70,
+    "trialDiscount": 3,
+    "highestEdu": 3,
+    "highestEduInstitution": "中国人民解放军战略支援部队信息工程大学",
+    "graduationYear": 2017,
+    "coachLabel": [
+      16
+    ],
+    "certificate": [
+      ""
+    ],
+    "performanceVideo": "",
+    "goodAtTeaching": "汽车说明应该一切.\n出来音乐人民简介精华提供.\n研究教育论坛方法科技日本部门.在线电影那个通过.结果单位全部发现工程.\n安全网站回复.\n国家但是应用日期.所有世界国家日本来源企业不过软件.\n在线完全其他类型可以.方面经济生活看到通过.中文日本名称专业这么增加.\n处理管理经济投资不同朋友一定.\n手机全国浏览本站行业.研究两个质量专业企业所有本站.\n建设能够需要得到.如此名称地区时候.",
+    "personalProfile": "因此单位时间以及.有关没有那些提高这里游戏精华.这是全部提高那么虽然.\n然后行业社区积分手机那些.对于出现显示公司投资有关.\n有些联系积分只是数据一些回复.技术如此增加上海.\n学生一个开发.联系准备这种更多完全下载电脑.\n以下浏览欢迎她的所有类别完成.运行进行增加得到只是.\n都是点击是一.任何您的主题能够作品进入特别.\n责任商品功能同时非常环境点击.能力语言这种研究生活本站.",
+    "hasTrial": 1,
+    "hasContract": 0,
+    "score": 54
+  },
+  "code": 100000,
+  "msg": "OK",
+  "ts": 1640604126,
+  "version": "v2",
+  "success": true
+}

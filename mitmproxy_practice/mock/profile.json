@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "data": {
+        "channel": "",
+        "country_code": "86",
+        "fchannel": "",
+        "pa_first_pay_time": "",
+        "pa_lesson_count": 0,
+        "pa_piano_date": "",
+        "pa_user_birthday": "",
+        "pa_user_first_complete_exp_time": "",
+        "pa_user_first_complete_formal_time": "",
+        "pa_user_gender": "保密",
+        "pa_user_grade": "未定级",
+        "pa_user_signup_time": "2020-06-30 14:36:43",
+        "phoneNumber": "18201595983",
+        "user_pay_status": "注册",
+        "uuid": "308649441756238132"
+    },
+    "errors": []
+}

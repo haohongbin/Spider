@@ -1,0 +1,250 @@
+{
+  "code": 200,
+  "message": "成功",
+  "data": {
+    "uid": 3508854,
+    "nickName": "用户*83",
+    "headIcon": "https://statics.pnlyy.com/image/user/header/defaultAvatarStudent.png",
+    "levelCode": "https://statics.pnlyy.com/image/mall/level_center_v0.png",
+    "level": "V0",
+    "levelName": "黑铁萌新",
+    "leftClass": 1.0,
+    "isShowExpire": 0,
+    "lastGiftClass": "",
+    "totalScore": 0,
+    "totalMedal": 2,
+    "isUnclaimedRight": 1,
+    "isUnclaimedScore": 1,
+    "invateActivity": null,
+    "giveClassActivity": null,
+    "myMoreMenus": [
+      {
+        "title": "我的音乐石",
+        "menuList": [
+          {
+            "menuName": "领音乐石",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_lingyinyueshi.png",
+            "referType": 0,
+            "referUrl": "myScore",
+            "isShowTips": 1,
+            "tips": "待领取",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "任务中心",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_renwuzhongxin.png",
+            "referType": 0,
+            "referUrl": "myTask",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "音乐石商城",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_yinyueshishangchang.png",
+            "referType": 1,
+            "referUrl": "https://vippl.peilian.com/mall/goods/index?isNeedNavigation=0",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "兑换记录",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_duihuanmingxi.png",
+            "referType": 1,
+            "referUrl": "https://vippl.peilian.com/mall/goods/exchange-record?backToNative=true&isNeedNavigation=0&",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          }
+        ]
+      },
+      {
+        "title": "家教互通",
+        "menuList": [
+          {
+            "menuName": "专属顾问",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_wodeguwen.png",
+            "referType": 0,
+            "referUrl": "chatonline",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "关注的老师",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_guanzhudelaoshi.png",
+            "referType": 0,
+            "referUrl": "myAttention",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "考级情况",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_kaojiqingkang.png",
+            "referType": 0,
+            "referUrl": "myLevel",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "上课要求",
+            "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_xuexipianhao.png",
+            "referType": 1,
+            "referUrl": "https://vippl.peilian.com/babyHobby?uid=25305350885413824&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "精品课程",
+            "menuImg": "https://statics.pnlyy.com/miniapp/ic_kecheng.png",
+            "referType": 1,
+            "referUrl": "https://vipactivity.mkpeilianc.com/classPackage/packageList?from=app",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "购买体验课",
+            "menuImg": "https://statics.pnlyy.com/miniapp/app_icon01.png",
+            "referType": 0,
+            "referUrl": "myPurse",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          },
+          {
+            "menuName": "套餐咨询",
+            "menuImg": "https://statics.pnlyy.com/miniapp/ic_ruhefufei.png",
+            "referType": 0,
+            "referUrl": "howToContinue",
+            "isShowTips": 0,
+            "tips": "",
+            "isNeedNavigation": 0,
+            "isNeedTitleStr": 1
+          }
+        ]
+      }
+    ],
+    "myFind": {
+      "title": "推荐有奖",
+      "menuList": [
+        {
+          "menuName": "推荐奖励",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/usercenter_lijituijian.png",
+          "referType": 1,
+          "referUrl": "https://vippl.peilian.com/playbills?uid=21573350885434818&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2&utm_source=app&utm_term=mine&utm_content=recommender",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        },
+        {
+          "menuName": "奖励明细",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/pic_wodejiangli.png",
+          "referType": 1,
+          "referUrl": "https://vippl.peilian.com/getAward?uid=32042350885413332&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        }
+      ]
+    },
+    "myTools": {
+      "title": "系统工具",
+      "menuList": [
+        {
+          "menuName": "网络检测",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_wangluojiancei.png",
+          "referType": 0,
+          "referUrl": "myNetwork",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        },
+        {
+          "menuName": "设备检测",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_shebeijiance.png",
+          "referType": 0,
+          "referUrl": "myDevice",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        },
+        {
+          "menuName": "帮助中心",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_bangzhuzhongxin.png",
+          "referType": 1,
+          "referUrl": "https://vipcomplex.peilian.com/help/index?platform=mobilePhone&userId=3508854",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        },
+        {
+          "menuName": "投诉表扬",
+          "menuImg": "https://statics.pnlyy.com/miniapp/usercenter/ic_tousubiaoyang.png",
+          "referType": 1,
+          "referUrl": "https://vippl.peilian.com/complaint?uid=28673350885481654&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2",
+          "isShowTips": 0,
+          "tips": "",
+          "isNeedNavigation": 0,
+          "isNeedTitleStr": 1
+        }
+      ]
+    },
+    "myCommon": {
+      "videoUrl": "https://vips-video.pnlyy.com/cameratest2.mp4",
+      "previewImage": "http://test001.pnlyy.com/pic_2.png",
+      "videoTime": "00:36",
+      "h5ClassHourDetail": "https://vipplactivity.peilian.com/curriculum-index?uid=64999350885478329&h5from=app&signature=dfe00df6b9ba83c691a854ee831b1fa2",
+      "userCenterUrl": "https://wx.peilian.com/user-center/landing?from=app&access_token=182015959839e4ae5eced9c4579a3ab5ca04483e515",
+      "isFirst": 0,
+      "curriculumHistoryUrl": "https://vipplactivity.peilian.com/curriculum-history?uid=88044350885475529&h5from=app&signature=dfe00df6b9ba83c691a854ee831b1fa2"
+    },
+    "redMenuList": [
+      "user-center",
+      "settingPad"
+    ],
+    "giveClassOpen": 1,
+    "totalGiveCount": 0,
+    "monthlyGiveList": [],
+    "giveText": {
+      "mainText": "",
+      "auxiliaryText": "",
+      "buttonText": ""
+    },
+    "giveRuleImage": "",
+    "giveActivePageH5Url": "",
+    "giveClassDetailH5Url": "https://vipplactivity.peilian.com/curriculum-history?tab=1&uid=83838350885498790&h5from=app&signature=dfe00df6b9ba83c691a854ee831b1fa2",
+    "giveRuleDetailH5Url": "",
+    "giveRuleDetailName": "规则详情",
+    "degreeCompletion": "您的资料完整度为0%，快去完善吧～",
+    "isPay": 1,
+    "isFirstPassword": 0,
+    "recommendedAwards": {
+      "inviteFriend": 0,
+      "rewardGiftCourse": 0,
+      "sharePlaybillH5Url": "https://vippl.peilian.com/playbills?uid=14048350885433705&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2&utm_source=app&utm_term=mine&utm_content=recommender",
+      "uploadScreenshotH5Url": "https://vippl.peilian.com/everyMonthGift?utm_source=VIPAPPMenuEveryMonthGift&uid=38809350885419818&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2",
+      "myRewardH5Url": "https://vippl.peilian.com/getAward?uid=24851350885411269&from=app&sign=dfe00df6b9ba83c691a854ee831b1fa2"
+    }
+  },
+  "msg": "成功"
+}

@@ -1,0 +1,36 @@
+{
+    "code": 2000,
+    "data": {
+        "list": [
+            {
+                "coach": {
+                    "avatar": "https://prd-public-yundi.oss-cn-beijing.aliyuncs.com/app/peilian/coach/1645586417000.jpg",
+                    "name": "刘连合"
+                },
+                "klass": {
+                    "blockPeriod": "23:30-23:55",
+                    "end_ts": 1645977300,
+                    "finishKlass": true,
+                    "id": "0510ccee-69d0-4ba6-88bb-cff20f044c6b",
+                    "isCancel": 0,
+                    "isPrepare": true,
+                    "is_multi": 0,
+                    "klassType": 1,
+                    "sorting": 1,
+                    "startDate": "2022年02月27日",
+                    "startKlass": false,
+                    "start_ts": 1645975800,
+                    "status": 3,
+                    "title": "25分钟课程",
+                    "toToday": "",
+                    "type": 1,
+                    "week": "周日"
+                }
+            }
+        ],
+        "total": 1
+    },
+    "status": true,
+    "ts": 1645601274,
+    "version": "v2"
+}

@@ -8,3 +8,14 @@ mitmproxy==7.0.4
 Faker==2.0.2
 numpy==1.21.5
 Markdown==3.3.6
+pycodestyle==2.8.0
+pyecharts==1.9.1
+pymysql==1.0.2
+allpairspy==2.5.0
+pytest==7.0.1
+seldom==2.5.1
+tep==0.9.7
+prestool==0.0.39
+GitPython==2.1.11
+gitdb2==2.0.5
+

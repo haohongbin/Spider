@@ -1,0 +1,25 @@
+{
+    "code": 0,
+    "data": {
+        "attribute_title": "已付费",
+        "available25": 0,
+        "available50": 0,
+        "course_count": 0,
+        "exercise_times_total": 0,
+        "exercise_times_week": 0,
+        "id": 584988,
+        "is_agree": 0,
+        "leave_count": 4,
+        "level": 1,
+        "level_limit": 1,
+        "level_real": 1,
+        "mobile": "18201595983",
+        "name": "宝贝5983",
+        "signature": "坚持练琴就是胜利哦！",
+        "thumb": "",
+        "total_time": 0,
+        "user_type": "0",
+        "uuid": "308649441756238132"
+    },
+    "errors": []
+}

@@ -69,7 +69,7 @@ print(f"{mocha.getName()}已为您准备好了，口感{mocha.getTaste()}，请�
 我们通过咖啡机制作咖啡，加入不同风味的咖啡豆产生不同口味的咖啡。这一过程如同一个工厂一样
 ，加入不同配料，生产出不同的产品。这就是程序设计中**工厂模式**的概念。  
 类图  
-![源码类图](snapshot/源码类图.png)  
+![源码类图](/snapshot/源码类图.png)  
 工厂模式中，用来创建对象的类就工厂类，被创建对象的类称为产品类。  
 Coffeemaker是工厂类，LatteCoffee和MochaCoffee是产品类。  
 ## 15.3 工厂三姐妹
@@ -80,7 +80,7 @@ Coffeemaker是工厂类，LatteCoffee和MochaCoffee是产品类。
 1、定义  
 定义一个创建对象（实例化对象）的接口，通过参数来决定创建哪个类的实例。  
 2、类图  
-![简单工厂模式类图](snapshot/简单工厂模式类图.png)  
+![简单工厂模式类图](/snapshot/简单工厂模式类图.png)  
 SimpleFactory是工厂类，负责创建对象。Product是要创建产品的抽象类，负责定义统一的接口。ProductA、ProductB是具体的产品类型。   
 3、优缺点  
 优点：  
@@ -99,7 +99,7 @@ SimpleFactory是工厂类，负责创建对象。Product是要创建产品的抽
 1、定义  
 定义一个创建对象（实例化对象）的接口，让子类来决定创建哪个类的实例。工厂方法使一个类的实例化延迟到其子类。  
 2、类图  
-![工厂方法模式的类图](snapshot/工厂方法模式的类图.png)  
+![工厂方法模式的类图](./snapshot/工厂方法模式的类图.png)  
 Factory是所有工厂的抽象类，负责统一的接口。ProductAFactory和ProductBFactory是具体的工厂类，
 分别负责产品ProductA和ProductB的创建。  
 3、优缺点  
@@ -120,11 +120,11 @@ Factory是所有工厂的抽象类，负责统一的接口。ProductAFactory和P
 提供一个创建一系列相关或相互依赖的对象的接口，而无需指定他们的具体类。  
 2、类图  
 之前提到的家电工厂的实现类图  
-![家电工厂的实现类图](snapshot/家电工厂的实现类图.png)  
+![家电工厂的实现类图](./snapshot/家电工厂的实现类图.png)  
 AppliancesFactory是一个抽象的工厂类，定义了三个方法，分别用来生产冰箱（Refrigerator）、空调（Air-conditioner）、洗衣机（WashingMachine）。
 EfficientFactory和EnergySavingFactory是两个具体的工厂类，分别用来生产高效型的家电和节能型的家电。  
 我们进一步抽象出抽象工厂模式的类图，  
-![抽象工厂模式的类图](snapshot/抽象工厂模式的类图.png)  
+![抽象工厂模式的类图](./snapshot/抽象工厂模式的类图.png)  
 抽象工厂模式适用于有多个系列且每个系列有相同子分类的产品。我们定义一个抽象的工厂类AbstractFactory,AbstractFactory中定义生产每个系列产品的方法；
 而两个具体的工厂实现类Factory1和Factory2分别生产子分类1的每一系列产品和子分类2的每一系列产品。  
 

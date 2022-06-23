@@ -77,14 +77,14 @@ def testBuilder():
 ### 12.3 构建模式的模型抽象
 #### 12.3.1 类图
 构建模式是一个产品或对象的生成器，强调产品的构建过程，精简版构建模式的类图如图所示  
-![](snapshot/精简版.png)  
+![](../jacoco/snapshot/精简版.png)  
 * Builder就是一个构建者，如故事剧情中的ToyBuilder。
 * Product是要构建成的目标产品的基类，如故事剧情中的Toy。
 * ProductA是具体产品类型，如故事剧情中的Car和Manor。
 * ToyBuilder通过不同的积木模块和建造顺序，可以建造出不同的车和庄园  
 如果应用场景更复杂，如：Toy不只有车和庄园 ，还有飞机、坦克、摩天轮、过山车等，而且不只造一辆车和一个庄园 ，数量由孩子自己定。上面这个ToyBuilder就会变得越来越臃肿。
 此时，需要升级版构建模式的类图，如图所示  
-![](snapshot/升级版构建模式的类图.png)    
+![](../jacoco/snapshot/升级版构建模式的类图.png)    
 * BuilderManager是构建类的管理类，负责管理每一种产品的创建数量和创建顺序
 * Builder是抽象构建类，ProductABuilder和ProductBBuilder是对应产品的具体构建类
 * Product是产品的抽象类（基类），ProductA和ProductB是具体的产品
@@ -337,7 +337,7 @@ print("tony == karry:",tony == karry) # tony == karry: True
 ```
 装饰器的实质就是对传进来的参数进行补充，可以在不对原有的类做任何代码变动的前提下增加额外的功能，使用装饰器可以装饰多个类。  
 #### 5.3.2 类图
-![](snapshot/单例模式的类图.png)  
+![](../jacoco/snapshot/单例模式的类图.png)  
 类图很简单，只有一个类，类中只有一个方法，getInstance()的作用就是获取该类的唯一实例。  
 #### 5.3.3 基于框架的实现
 ```python
@@ -532,13 +532,13 @@ decorateTeacher.wear()
 #### 4.2.1 什么是装饰模式
 动态的给一个对象增加一些额外的职责，就拓展对象功能来说，装饰模式比生成子类的方式更为灵活。  
 就故事剧情中示例来说，由结构庞大的子类继承关系转换成了结构紧凑的装饰关系。  
-![继承关系](snapshot/继承关系.png)  
-![装饰关系](snapshot/装饰关系.png)
+![继承关系](../jacoco/snapshot/继承关系.png)  
+![装饰关系](../jacoco/snapshot/装饰关系.png)
 #### 4.2.2 装饰模式设计思想
 生活中的着装问题（想怎么搭怎么搭），就是程序中装饰模式的典型样例。  
 ### 4.3 装饰模式的模型抽象
 #### 4.3.1 类图
-![](snapshot/装饰模式的类图.png)  
+![](../jacoco/snapshot/装饰模式的类图.png)  
 图中Component是一个抽象类，代表具有某种功能（function）的组件，ComponentImplA和ComponentImplB分别是其具体的实现类。Decorator是
 Component的装饰器，里面有一个Component的对象decorated,这就是被装饰的对象，装饰器可为被装饰对象添加额外的功能和行为（addBehavior）.
 DecoratorImplA和DecoratorImplB分别是两个具体的装饰器（实现子类）。   
@@ -657,7 +657,7 @@ glasses.wear()
 缺点：  
 与继承相比，用装饰的方式拓展功能容易出错，排错也更困难。对于多次装饰的对象，调试寻找错误时可能需要逐级排查，较为繁琐。  
 * python装饰器与装饰模式的区别与联系  
-![python装饰器与装饰模式的区别](snapshot/python装饰器与装饰模式的区别.png)  
+![python装饰器与装饰模式的区别](../jacoco/snapshot/python装饰器与装饰模式的区别.png)  
 
 ### 4.4 应用场景
 （1）有大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数据呈爆炸性增长  
@@ -814,7 +814,7 @@ class Clone:
         return deepcopy(self)
 ```
 #### 6.3.2 类图
-![克隆模式的类图](snapshot/克隆模式的类图.png)  
+![克隆模式的类图](../jacoco/snapshot/克隆模式的类图.png)  
 Clone是克隆模式的基类，SubClassA和SubClassB是具体的实现类。  
 python中有copy模块的支持，因此克隆模式实现起来非常简单。  
 #### 6.3.3 基于框架的实现

@@ -1,0 +1,20 @@
+{
+    "code": 100000,
+    "data": {
+        "aiStatus": 0,
+        "auditionKlass": 0,
+        "economy": 0,
+        "effectiveVipNum": null,
+        "expiryDate": "开通平台会员尊享更多权益",
+        "hasAuditionKlass": 0,
+        "infoStatus": 1,
+        "payNumber": 112,
+        "signCoachNum": 0,
+        "vipStatus": 0
+    },
+    "msg": "OK",
+    "status": true,
+    "success": true,
+    "ts": 1655191344,
+    "version": "v2"
+}

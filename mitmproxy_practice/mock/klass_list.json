@@ -1,0 +1,56 @@
+{
+  "status": true,
+  "data": {
+    "total": 1,
+    "list": [
+      {
+        "klassId": "40402300-4833-4798-a7a5-fdfbc580e2b2",
+        "startDate": "2022-04-09",
+        "startTime": "20:00",
+        "endTime": "20:25",
+        "subjectId": 26,
+        "originPrice": 5,
+        "curPrice": 5,
+        "status": 1,
+        "cancelType": 0,
+        "studentIrregular": 3,
+        "coachIrregular": 3,
+        "coachReviews": false,
+        "studentReviews": false,
+        "coachId": "aa148e1c-70de-4279-a2b4-a227a95461a1",
+        "coachName": "周柳",
+        "coachAvatar": "https://prd-public-yundi.oss-cn-beijing.aliyuncs.com/app/peilian/coach/t-boy.png",
+        "studentId": "f3c30a2b-5d10-427e-87b3-824463e42409",
+        "studentName": "戴明",
+        "studentAvatar": "https://prd-public-yundi.oss-cn-beijing.aliyuncs.com/app/peilian/coach/t-boy.png",
+        "type": "1",
+        "klassMinute": 25,
+        "finishKlass": false,
+        "changeKlass": 0
+      }
+    ],
+    "pageNum": 1,
+    "pageSize": 100,
+    "size": 0,
+    "startRow": 0,
+    "endRow": 0,
+    "pages": 1,
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1
+  },
+  "code": 100000,
+  "msg": "OK",
+  "ts": 1640676555,
+  "version": "v2",
+  "success": true
+}
